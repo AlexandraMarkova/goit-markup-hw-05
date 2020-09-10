@@ -86,6 +86,8 @@ body {
 }
 
 .site-nav .link {
+  position: relative;
+
   display: block;
   font-weight: 500;
 
@@ -103,10 +105,16 @@ body {
 }
 
 .site-nav .link.current::after {
+  position: absolute;
+
   content: '';
   display: block;
+  width: 100%;
+  height: 5px;
   background: var(--blue);
   border-radius: 2px;
+  left: 0;
+  bottom: 0;
 }
 
 .site-nav .link:hover,
@@ -252,6 +260,35 @@ body {
   letter-spacing: 0.03em;
 }
 
+/* Чем мы занимаемся */
+.doing-card {
+  position: relative;
+}
+
+.doing-card::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.doing-text {
+  position: absolute;
+  margin-top: 0;
+  margin-bottom: 0;
+  bottom: 27px;
+  right: 82px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white);
+}
 /* featyre */
 .featyre {
   display: flex;
