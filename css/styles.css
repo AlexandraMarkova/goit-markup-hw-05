@@ -232,6 +232,11 @@ body {
   letter-spacing: 0.06em;
 }
 
+.button:hover,
+.button:focus {
+  outline: none;
+}
+
 /* section */
 .section {
   padding-top: 0;
@@ -590,6 +595,7 @@ body {
 .portfolio .button:focus {
   background-color: var(--blue);
   color: var(--white);
+  outline: none;
 }
 
 .portfolio .item:not(:last-child) {
@@ -718,6 +724,11 @@ body {
   background: rgba(0, 0, 0, 0.2);
 }
 
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .modal {
   position: absolute;
   top: 50%;
@@ -739,22 +750,21 @@ body {
   top: 8px;
   width: 30px;
   height: 30px;
+  padding: 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  box-sizing: border-box;
 }
 
-.modal-btn::after {
+.modal-icon {
   content: '';
   display: inline-block;
-  width: 18px;
-  height: 18px;
-  top: 6px;
-
-  background-image: url(../images/close.svg);
+  width: 11px;
+  height: 11px;
 
   fill: var(--black-one);
-  /* background-size: contain;
-  justify-content: center;
-  align-items: center; */
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+  outline: none;
 }
